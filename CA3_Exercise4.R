@@ -42,3 +42,7 @@ est <- optim(par = initial,
              hessian = TRUE)
 varcov <- solve(est$hessian)
 sqrt(diag(varcov))[1:4]
+
+fit <- lm(data = df, y~.)
+fit$coefficients
+fit$residuals
